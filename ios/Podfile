@@ -23,8 +23,10 @@ target 'Noted' do
     # you should disable the next line.
     :flipper_configuration => FlipperConfiguration.enabled,
     # An absolute path to your application root.
-    :app_path => "#{Pod::Config.instance.installation_root}/.."
+    :app_path => "#{Pod::Config.instance.installation_root}/..",
   )
+
+  pod 'react-native-sqlite-storage', :path => '../node_modules/react-native-sqlite-storage'
 
   target 'NotedTests' do
     inherit! :complete
